@@ -33,9 +33,10 @@ The fields in the table below can be used in these parts of STAC documents:
 | s2:product_type                         | string   | Product Type                         |
 | s2:datatake_type                        | string   | Datatake Type                        |
 | s2:generation_time                      | datetime | Generation Time                      |
+| s2:sequence                             | string   | Sequence number from Sinergize       |
 | s2:processing_baseline                  | string   | Processing Baseline                  |
-| s2:mgrs_tile                            | number   | Sentinel-2 MGRS Tile Identifier      |
-| s2:sreflectance_conversion_factor       | number   | Reflectance Conversion Factor        |
+| s2:mgrs_tile                            | string   | Sentinel-2 MGRS Tile Identifier      |
+| s2:reflectance_conversion_factor        | number   | Reflectance Conversion Factor        |
 | s2:water_percentage                     | number   | Water Percentage                     |
 | s2:mean_solar_zenith                    | number   | Mean Solar Zenith                    |
 | s2:mean_solar_azimuth                   | number   | Mean Solar Azimuth                   |

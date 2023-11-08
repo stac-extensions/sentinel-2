@@ -180,6 +180,10 @@
           "title": "Sentinel-2 MGRS Tile Identifier",
           "type": "string",
           "pattern": "^\\d\\d?[CDEFGHJKLMNPQRSTUVWX][ABCDEFGHJKLMNPQRSTUVWXYZ][ABCDEFGHJKLMNPQRSTUV]$"
+        },
+        "s2:sequence": {
+          "title": "Sentinel-2 Sequence number applied by Sinergize processing",
+          "type": "string"
         }
       },
       "patternProperties": {

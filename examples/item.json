@@ -731,7 +731,8 @@
     "s2:high_proba_clouds_percentage": 0.699942,
     "s2:reflectance_conversion_factor": 1.01678413954947,
     "s2:medium_proba_clouds_percentage": 2.742413,
-    "s2:saturated_defective_pixel_percentage": 0
+    "s2:saturated_defective_pixel_percentage": 0,
+    "s2:sequence": "0"
   },
   "stac_extensions": [
     "https://stac-extensions.github.io/sentinel-2/v1.0.0/schema.json",
