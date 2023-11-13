@@ -33,7 +33,6 @@ The fields in the table below can be used in these parts of STAC documents:
 | s2:product_type                         | string   | Product Type                         |
 | s2:datatake_type                        | string   | Datatake Type                        |
 | s2:generation_time                      | datetime | Generation Time                      |
-| s2:sequence                             | string   | Sequence number from Sinergize       |
 | s2:processing_baseline                  | string   | Processing Baseline                  |
 | s2:mgrs_tile                            | string   | Sentinel-2 MGRS Tile Identifier      |
 | s2:reflectance_conversion_factor        | number   | Reflectance Conversion Factor        |
