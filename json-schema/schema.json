@@ -48,9 +48,14 @@
     "fields": {
       "type": "object",
       "properties": {
+        "s2:tile_id": {
+          "title": "Tile Identifier",
+          "type": "string"
+        },
         "s2:granule_id": {
           "title": "Granule Identifier",
-          "type": "string"
+          "type": "string",
+          "deprecated": true
         },
         "s2:datatake_id": {
           "title": "Datatake Identifier",
@@ -92,13 +97,15 @@
           "title": "Mean Solar Zenith",
           "type": "number",
           "minimum": 0,
-          "maximum": 180
+          "maximum": 180,
+          "deprecated": true
         },
         "s2:mean_solar_azimuth": {
           "title": "Mean Solar Azimuth",
           "type": "number",
           "minimum": 0,
-          "maximum": 180
+          "maximum": 180, 
+          "deprecated": true
         },
         "s2:snow_ice_percentage": {
           "title": "Snow and Ice Percentage",
@@ -179,7 +186,8 @@
         "s2:mgrs_tile": {
           "title": "Sentinel-2 MGRS Tile Identifier",
           "type": "string",
-          "pattern": "^\\d\\d?[CDEFGHJKLMNPQRSTUVWX][ABCDEFGHJKLMNPQRSTUVWXYZ][ABCDEFGHJKLMNPQRSTUV]$"
+          "pattern": "^\\d\\d?[CDEFGHJKLMNPQRSTUVWX][ABCDEFGHJKLMNPQRSTUVWXYZ][ABCDEFGHJKLMNPQRSTUV]$",
+          "deprecated": true
         }
       },
       "patternProperties": {

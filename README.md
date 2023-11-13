@@ -26,7 +26,7 @@ The fields in the table below can be used in these parts of STAC documents:
 
 | Field Name                              | Type     | Description                          |
 | --------------------------------------- | -------- | ------------------------------------ |
-| s2:granule_id                           | string   | Granule Identifier                   |
+| s2:tile_id                              | string   | Tile Identifier                   |
 | s2:datatake_id                          | string   | Datatake Identifier                  |
 | s2:product_uri                          | string   | Product URI                          |
 | s2:datastrip_id                         | string   | Datastrip Identifier                 |
@@ -34,11 +34,8 @@ The fields in the table below can be used in these parts of STAC documents:
 | s2:datatake_type                        | string   | Datatake Type                        |
 | s2:generation_time                      | datetime | Generation Time                      |
 | s2:processing_baseline                  | string   | Processing Baseline                  |
-| s2:mgrs_tile                            | string   | Sentinel-2 MGRS Tile Identifier      |
 | s2:reflectance_conversion_factor        | number   | Reflectance Conversion Factor        |
 | s2:water_percentage                     | number   | Water Percentage                     |
-| s2:mean_solar_zenith                    | number   | Mean Solar Zenith                    |
-| s2:mean_solar_azimuth                   | number   | Mean Solar Azimuth                   |
 | s2:snow_ice_percentage                  | number   | Snow and Ice Percentage              |
 | s2:vegetation_percentage                | number   | Vegetation Percentage                |
 | s2:thin_cirrus_percentage               | number   | Thin Cirrus Percentage               |
@@ -51,10 +48,20 @@ The fields in the table below can be used in these parts of STAC documents:
 | s2:high_proba_clouds_percentage         | number   | High Probability Clouds Percentage   |
 | s2:medium_proba_clouds_percentage       | number   | Medium Probability Clouds Percentage |
 | s2:saturated_defective_pixel_percentage | number   | Saturated Defective Pixel Percentage |
+| s2:granule_id                           | string   | **DEPRECATED** Granule Identifier                   |
+| s2:mgrs_tile                            | string   | **DEPRECATED** Sentinel-2 MGRS Tile Identifier      |
+| s2:mean_solar_zenith                    | number   | **DEPRECATED** Mean Solar Zenith                    |
+| s2:mean_solar_azimuth                   | number   | **DEPRECATED** Mean Solar Azimuth                   |
 
 ### Additional Field Information
 
-None
+**s2:granule_id** is deprecated in favor of `s2:tile_id`
+
+**s2:mean_solar_zenith** is deprecated in favor of the View Extension field `view:sun_elevation`
+
+**s2:mean_solar_azimuth** is deprecated in favor of the View Extension field `view:sun_azimuth`
+
+**s2:mgrs_tile** is deprecated in favor the [MGRS Extension](https://github.com/stac-extensions/mgrs) fields
 
 ## Relation types
 
