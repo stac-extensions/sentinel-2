@@ -1,0 +1,201 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://stac-extensions.github.io/sentinel-2/v1.0.0/schema.json",
+  "title": "Sentinel-2 Extension",
+  "description": "Sentinel-2 Extension to STAC Items.",
+  "allOf": [
+    {
+      "type": "object",
+      "required": [
+        "type",
+        "properties"
+      ],
+      "properties": {
+        "type": {
+          "const": "Feature"
+        },
+        "properties": {
+          "allOf": [
+            {
+              "required": []
+            },
+            {
+              "$ref": "#/definitions/fields"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "$ref": "#/definitions/stac_extensions"
+    }
+  ],
+  "definitions": {
+    "stac_extensions": {
+      "type": "object",
+      "required": [
+        "stac_extensions"
+      ],
+      "properties": {
+        "stac_extensions": {
+          "type": "array",
+          "contains": {
+            "const": "https://stac-extensions.github.io/sentinel-2/v1.0.0/schema.json"
+          }
+        }
+      }
+    },
+    "fields": {
+      "type": "object",
+      "properties": {
+        "s2:tile_id": {
+          "title": "Tile Identifier",
+          "type": "string"
+        },
+        "s2:granule_id": {
+          "title": "Granule Identifier",
+          "type": "string",
+          "deprecated": true
+        },
+        "s2:datatake_id": {
+          "title": "Datatake Identifier",
+          "type": "string"
+        },
+        "s2:product_uri": {
+          "title": "Product URI",
+          "type": "string"
+        },
+        "s2:datastrip_id": {
+          "title": "Datastrip Identifier",
+          "type": "string"
+        },
+        "s2:product_type": {
+          "title": "Product Type",
+          "type": "string"
+        },
+        "s2:datatake_type": {
+          "title": "Datatake Type",
+          "type": "string"
+        },
+        "s2:generation_time": {
+          "title": "Generation Time",
+          "type": "string",
+          "format": "date-time"
+        },
+        "s2:processing_baseline": {
+          "title": "Processing Baseline",
+          "type": "string",
+          "pattern": "^\\d\\d\\.\\d\\d$"
+        },
+        "s2:water_percentage": {
+          "title": "Water Percentage",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "s2:mean_solar_zenith": {
+          "title": "Mean Solar Zenith",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 180,
+          "deprecated": true
+        },
+        "s2:mean_solar_azimuth": {
+          "title": "Mean Solar Azimuth",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 180, 
+          "deprecated": true
+        },
+        "s2:snow_ice_percentage": {
+          "title": "Snow and Ice Percentage",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "s2:vegetation_percentage": {
+          "title": "Vegetation Percentage",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "s2:thin_cirrus_percentage": {
+          "title": "Thin Cirrus Percentage",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "s2:cloud_shadow_percentage": {
+          "title": "Cloud Shadow Percentage",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "s2:nodata_pixel_percentage": {
+          "title": "No Data Pixel Percentage",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "s2:unclassified_percentage": {
+          "title": "Unclassified Percentage",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "s2:dark_features_percentage": {
+          "title": "Dark Features Percentage",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "s2:not_vegetated_percentage": {
+          "title": "Not Vegetated Percentage",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "s2:degraded_msi_data_percentage": {
+          "title": "Degraded MSI Data Percentage",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "s2:high_proba_clouds_percentage": {
+          "title": "High Probability Clouds Percentage",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "s2:medium_proba_clouds_percentage": {
+          "title": "Medium Probability Clouds Percentage",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "s2:saturated_defective_pixel_percentage": {
+          "title": "Saturated Defective Pixel Percentage",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "s2:reflectance_conversion_factor": {
+          "title": "Reflectance Conversion Factor",
+          "type": "number"
+        },
+        "s2:mgrs_tile": {
+          "title": "Sentinel-2 MGRS Tile Identifier",
+          "type": "string",
+          "pattern": "^\\d\\d?[CDEFGHJKLMNPQRSTUVWX][ABCDEFGHJKLMNPQRSTUVWXYZ][ABCDEFGHJKLMNPQRSTUV]$",
+          "deprecated": true
+        }
+      },
+      "patternProperties": {
+        "^(?!s2:)": {
+          "$comment": "Do not allow other fields with this prefix"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
