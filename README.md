@@ -9,6 +9,13 @@
 
 This document explains the Sentinel-2 Extension to the [SpatioTemporal Asset Catalog](https://github.com/radiantearth/stac-spec) (STAC) specification.
 
+The intention of the first version of the specification is to define the existing behavior of
+the properties prefixed with `s2` as created by the [stactools-sentinel2](https://github.com/stactools-packages/sentinel2)
+package and used by [Earth Search](https://earth-search.aws.element84.com/v1) and
+[Microsoft Planetary Computer](https://planetarycomputer.microsoft.com/api/stac/v1). Future versions
+will aspire to standardize fields such as the numerous coverage calculations into separate extensions
+that are not specific to Sentinel-2.
+
 - Examples:
   - [Item example](examples/item.json): Shows the basic usage of the extension in a STAC Item
 - [JSON Schema](json-schema/schema.json)
@@ -24,34 +31,34 @@ The fields in the table below can be used in these parts of STAC documents:
 - [ ] Assets (for both Collections and Items, incl. Item Asset Definitions in Collections)
 - [ ] Links
 
-| Field Name                              | Type     | Description                          |
-| --------------------------------------- | -------- | ------------------------------------ |
-| s2:tile_id                              | string   | Tile Identifier                   |
-| s2:datatake_id                          | string   | Datatake Identifier                  |
-| s2:product_uri                          | string   | Product URI                          |
-| s2:datastrip_id                         | string   | Datastrip Identifier                 |
-| s2:product_type                         | string   | Product Type                         |
-| s2:datatake_type                        | string   | Datatake Type                        |
-| s2:generation_time                      | datetime | Generation Time                      |
-| s2:processing_baseline                  | string   | Processing Baseline                  |
-| s2:reflectance_conversion_factor        | number   | Reflectance Conversion Factor        |
-| s2:water_percentage                     | number   | Water Percentage                     |
-| s2:snow_ice_percentage                  | number   | Snow and Ice Percentage              |
-| s2:vegetation_percentage                | number   | Vegetation Percentage                |
-| s2:thin_cirrus_percentage               | number   | Thin Cirrus Percentage               |
-| s2:cloud_shadow_percentage              | number   | Cloud Shadow Percentage              |
-| s2:nodata_pixel_percentage              | number   | No Data Pixel Percentage             |
-| s2:unclassified_percentage              | number   | Unclassified Percentage              |
-| s2:dark_features_percentage             | number   | Dark Features Percentage             |
-| s2:not_vegetated_percentage             | number   | Not Vegetated Percentage             |
-| s2:degraded_msi_data_percentage         | number   | Degraded MSI Data Percentage         |
-| s2:high_proba_clouds_percentage         | number   | High Probability Clouds Percentage   |
-| s2:medium_proba_clouds_percentage       | number   | Medium Probability Clouds Percentage |
-| s2:saturated_defective_pixel_percentage | number   | Saturated Defective Pixel Percentage |
-| s2:granule_id                           | string   | **DEPRECATED** Granule Identifier                   |
-| s2:mgrs_tile                            | string   | **DEPRECATED** Sentinel-2 MGRS Tile Identifier      |
-| s2:mean_solar_zenith                    | number   | **DEPRECATED** Mean Solar Zenith                    |
-| s2:mean_solar_azimuth                   | number   | **DEPRECATED** Mean Solar Azimuth                   |
+| Field Name                              | Type     | Description                                    |
+| --------------------------------------- | -------- | ---------------------------------------------- |
+| s2:tile_id                              | string   | Tile Identifier                                |
+| s2:datatake_id                          | string   | Datatake Identifier                            |
+| s2:product_uri                          | string   | Product URI                                    |
+| s2:datastrip_id                         | string   | Datastrip Identifier                           |
+| s2:product_type                         | string   | Product Type                                   |
+| s2:datatake_type                        | string   | Datatake Type                                  |
+| s2:generation_time                      | datetime | Generation Time                                |
+| s2:processing_baseline                  | string   | Processing Baseline                            |
+| s2:reflectance_conversion_factor        | number   | Reflectance Conversion Factor                  |
+| s2:water_percentage                     | number   | Water Percentage                               |
+| s2:snow_ice_percentage                  | number   | Snow and Ice Percentage                        |
+| s2:vegetation_percentage                | number   | Vegetation Percentage                          |
+| s2:thin_cirrus_percentage               | number   | Thin Cirrus Percentage                         |
+| s2:cloud_shadow_percentage              | number   | Cloud Shadow Percentage                        |
+| s2:nodata_pixel_percentage              | number   | No Data Pixel Percentage                       |
+| s2:unclassified_percentage              | number   | Unclassified Percentage                        |
+| s2:dark_features_percentage             | number   | Dark Features Percentage                       |
+| s2:not_vegetated_percentage             | number   | Not Vegetated Percentage                       |
+| s2:degraded_msi_data_percentage         | number   | Degraded MSI Data Percentage                   |
+| s2:high_proba_clouds_percentage         | number   | High Probability Clouds Percentage             |
+| s2:medium_proba_clouds_percentage       | number   | Medium Probability Clouds Percentage           |
+| s2:saturated_defective_pixel_percentage | number   | Saturated Defective Pixel Percentage           |
+| s2:granule_id                           | string   | **DEPRECATED** Granule Identifier              |
+| s2:mgrs_tile                            | string   | **DEPRECATED** Sentinel-2 MGRS Tile Identifier |
+| s2:mean_solar_zenith                    | number   | **DEPRECATED** Mean Solar Zenith               |
+| s2:mean_solar_azimuth                   | number   | **DEPRECATED** Mean Solar Azimuth              |
 
 ### Additional Field Information
 
