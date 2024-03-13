@@ -40,7 +40,7 @@ The fields in the table below can be used in these parts of STAC documents:
 | s2:product_type                         | string   | Product Type                                   |
 | s2:datatake_type                        | string   | Datatake Type                                  |
 | s2:generation_time                      | datetime | Generation Time                                |
-| s2:processing_baseline                  | string   | Processing Baseline                            |
+| s2:processing_baseline                  | string   | [Processing Baseline](https://sentinels.copernicus.eu/web/sentinel/technical-guides/sentinel-2-msi/processing-baseline) |
 | s2:reflectance_conversion_factor        | number   | Reflectance Conversion Factor                  |
 | s2:water_percentage                     | number   | Water Percentage                               |
 | s2:snow_ice_percentage                  | number   | Snow and Ice Percentage                        |
