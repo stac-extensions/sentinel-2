@@ -4,7 +4,7 @@
 - **Identifier:** <https://stac-extensions.github.io/sentinel-2/v1.0.0/schema.json>
 - **Field Name Prefix:** s2
 - **Scope:** Item
-- **Extension [Maturity Classification](https://github.com/radiantearth/stac-spec/tree/master/extensions/README.md#extension-maturity):** Stable
+- **Extension [Maturity Classification](https://github.com/radiantearth/stac-spec/tree/master/extensions/README.md#extension-maturity):** Candidate
 - **Owner**: @philvarner
 
 This document explains the Sentinel-2 Extension to the [SpatioTemporal Asset Catalog](https://github.com/radiantearth/stac-spec) (STAC) specification.
