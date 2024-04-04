@@ -21,6 +21,7 @@
       "msi"
     ],
     "eo:cloud_cover": 51.580326,
+    "eo:snow_cover": 0,
     "sat:orbit_state": "descending",
     "sat:relative_orbit": 13,
     "proj:epsg": 32707,
@@ -55,7 +56,6 @@
     "s2:medium_proba_clouds_percentage": 14.61311,
     "s2:high_proba_clouds_percentage": 24.183494,
     "s2:thin_cirrus_percentage": 12.783723,
-    "s2:snow_ice_percentage": 0,
     "datetime": "2019-02-12T19:26:51.024000Z"
   },
   "geometry": {

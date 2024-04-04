@@ -61,7 +61,6 @@
         { "required": ["s2:generation_time"] },
         { "required": ["s2:processing_baseline"] },
         { "required": ["s2:water_percentage"] },
-        { "required": ["s2:snow_ice_percentage"] },
         { "required": ["s2:vegetation_percentage"] },
         { "required": ["s2:thin_cirrus_percentage"] },
         { "required": ["s2:cloud_shadow_percentage"] },
