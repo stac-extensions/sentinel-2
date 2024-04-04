@@ -2,14 +2,22 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://stac-extensions.github.io/sentinel-2/v1.0.0/schema.json",
   "title": "Sentinel-2 Extension",
-  "description": "Sentinel-2 Extension to STAC Items.",
-  "allOf": [
+  "description": "STAC Sentinel-2 Extension for STAC Items and STAC Collection Summaries.",
+  "type": "object",
+  "required": ["stac_extensions"],
+  "properties": {
+    "stac_extensions": {
+      "type": "array",
+      "contains": {
+        "const": "https://stac-extensions.github.io/sentinel-2/v1.0.0/schema.json"
+      }
+    }
+  },
+  "oneOf": [
     {
+      "$comment": "This is the schema for STAC Items.",
       "type": "object",
-      "required": [
-        "type",
-        "properties"
-      ],
+      "required": ["type", "properties"],
       "properties": {
         "type": {
           "const": "Feature"
@@ -17,7 +25,7 @@
         "properties": {
           "allOf": [
             {
-              "required": []
+              "$ref": "#/definitions/require_any"
             },
             {
               "$ref": "#/definitions/fields"
@@ -27,23 +35,46 @@
       }
     },
     {
-      "$ref": "#/definitions/stac_extensions"
+      "$comment": "This is the schema for STAC Collections, or more specifically only Collection Summaries in this case. By default, only checks the existence of the properties, but not the schema of the summaries.",
+      "type": "object",
+      "required": ["type", "summaries"],
+      "properties": {
+        "type": {
+          "const": "Collection"
+        },
+        "summaries": {
+          "$ref": "#/definitions/require_any"
+        }
+      }
     }
   ],
   "definitions": {
-    "stac_extensions": {
-      "type": "object",
-      "required": [
-        "stac_extensions"
-      ],
-      "properties": {
-        "stac_extensions": {
-          "type": "array",
-          "contains": {
-            "const": "https://stac-extensions.github.io/sentinel-2/v1.0.0/schema.json"
-          }
-        }
-      }
+    "require_any": {
+      "$comment": "Please list all fields here so that we can force the existence of one of them in other parts of the schemas.",
+      "anyOf": [
+        { "required": ["s2:tile_id"] },
+        { "required": ["s2:datatake_id"] },
+        { "required": ["s2:product_uri"] },
+        { "required": ["s2:datastrip_id"] },
+        { "required": ["s2:product_type"] },
+        { "required": ["s2:datatake_type"] },
+        { "required": ["s2:generation_time"] },
+        { "required": ["s2:processing_baseline"] },
+        { "required": ["s2:water_percentage"] },
+        { "required": ["s2:snow_ice_percentage"] },
+        { "required": ["s2:vegetation_percentage"] },
+        { "required": ["s2:thin_cirrus_percentage"] },
+        { "required": ["s2:cloud_shadow_percentage"] },
+        { "required": ["s2:nodata_pixel_percentage"] },
+        { "required": ["s2:unclassified_percentage"] },
+        { "required": ["s2:dark_features_percentage"] },
+        { "required": ["s2:not_vegetated_percentage"] },
+        { "required": ["s2:degraded_msi_data_percentage"] },
+        { "required": ["s2:high_proba_clouds_percentage"] },
+        { "required": ["s2:medium_proba_clouds_percentage"] },
+        { "required": ["s2:saturated_defective_pixel_percentage"] },
+        { "required": ["s2:reflectance_conversion_factor"] }
+      ]
     },
     "fields": {
       "type": "object",
@@ -104,7 +135,7 @@
           "title": "Mean Solar Azimuth",
           "type": "number",
           "minimum": 0,
-          "maximum": 180, 
+          "maximum": 180,
           "deprecated": true
         },
         "s2:snow_ice_percentage": {
