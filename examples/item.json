@@ -712,10 +712,10 @@
     "s2:product_type": "S2MSI2A",
     "sat:orbit_state": "descending",
     "s2:datatake_type": "INS-NOBS",
-    "s2:generation_time": "2023-11-07T18:21:59.14490Z",
+    "processing:datetime": "2023-11-07T18:21:59.14490Z",
     "sat:relative_orbit": 139,
     "s2:water_percentage": 95.782292,
-    "s2:processing_baseline": "05.09",
+    "processing:version": "05.09",
     "s2:snow_ice_percentage": 0,
     "s2:vegetation_percentage": 0,
     "s2:thin_cirrus_percentage": 0.774645,
@@ -734,7 +734,8 @@
     "https://stac-extensions.github.io/sentinel-2/v1.0.0/schema.json",
     "https://stac-extensions.github.io/eo/v1.0.0/schema.json",
     "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/projection/v1.1.0/schema.json"
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json"
   ],
   "stac_version": "1.0.0"
 }
