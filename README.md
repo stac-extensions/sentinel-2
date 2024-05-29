@@ -35,11 +35,9 @@ The fields in the table below can be used in these parts of STAC documents:
 | --------------------------------------- | -------- | ------------------------------------------------------------ |
 | s2:tile_id                              | string   | Tile Identifier                                              |
 | s2:datatake_id                          | string   | Datatake Identifier                                          |
-| s2:product_uri                          | string   | Product URI                                                  |
 | s2:datastrip_id                         | string   | Datastrip Identifier                                         |
 | s2:product_type                         | string   | Product Type                                                 |
 | s2:datatake_type                        | string   | Datatake Type                                                |
-| s2:reflectance_conversion_factor        | number   | Reflectance Conversion Factor                                |
 | s2:water_percentage                     | number   | Water Percentage                                             |
 | s2:vegetation_percentage                | number   | Vegetation Percentage                                        |
 | s2:thin_cirrus_percentage               | number   | Thin Cirrus Percentage                                       |
@@ -52,6 +50,8 @@ The fields in the table below can be used in these parts of STAC documents:
 | s2:high_proba_clouds_percentage         | number   | High Probability Clouds Percentage                           |
 | s2:medium_proba_clouds_percentage       | number   | Medium Probability Clouds Percentage                         |
 | s2:saturated_defective_pixel_percentage | number   | Saturated Defective Pixel Percentage                         |
+| s2:product_uri                          | string   | **DEPRECATED** Product URI                                   |
+| s2:reflectance_conversion_factor        | number   | **DEPRECATED** Reflectance Conversion Factor                 |
 | s2:snow_ice_percentage                  | number   | **DEPRECATED** in favor of `eo:snow_cover`. Snow and Ice Percentage |
 | s2:generation_time                      | datetime | **DEPRECATED** in favor of `processing:datetime`. Generation Time |
 | s2:processing_baseline                  | string   | **DEPRECATED** in favor of `processing:version`. [Processing Baseline](https://sentinels.copernicus.eu/web/sentinel/technical-guides/sentinel-2-msi/processing-baseline) |

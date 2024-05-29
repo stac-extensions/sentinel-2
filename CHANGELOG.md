@@ -13,8 +13,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Deprecated
 
+- `s2:product_uri` without replacement (could use links to the source data)
+- `s2:reflectance_conversion_factor` without replacement
 - `s2:generation_time` in favor of `processing:datetime`
-
 - `s2:processing_baseline` in favor of `processing:version`
 
 ### Removed
