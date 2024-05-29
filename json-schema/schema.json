@@ -58,8 +58,6 @@
         { "required": ["s2:datastrip_id"] },
         { "required": ["s2:product_type"] },
         { "required": ["s2:datatake_type"] },
-        { "required": ["s2:generation_time"] },
-        { "required": ["s2:processing_baseline"] },
         { "required": ["s2:water_percentage"] },
         { "required": ["s2:snow_ice_percentage"] },
         { "required": ["s2:vegetation_percentage"] },
@@ -111,12 +109,14 @@
         "s2:generation_time": {
           "title": "Generation Time",
           "type": "string",
-          "format": "date-time"
+          "format": "date-time",
+          "deprecated": true
         },
         "s2:processing_baseline": {
           "title": "Processing Baseline",
           "type": "string",
-          "pattern": "^\\d\\d\\.\\d\\d$"
+          "pattern": "^\\d\\d\\.\\d\\d$",
+          "deprecated": true
         },
         "s2:water_percentage": {
           "title": "Water Percentage",
