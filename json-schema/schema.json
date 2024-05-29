@@ -59,7 +59,6 @@
         { "required": ["s2:product_type"] },
         { "required": ["s2:datatake_type"] },
         { "required": ["s2:water_percentage"] },
-        { "required": ["s2:snow_ice_percentage"] },
         { "required": ["s2:vegetation_percentage"] },
         { "required": ["s2:thin_cirrus_percentage"] },
         { "required": ["s2:cloud_shadow_percentage"] },

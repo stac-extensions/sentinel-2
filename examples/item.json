@@ -715,8 +715,8 @@
     "processing:datetime": "2023-11-07T18:21:59.14490Z",
     "sat:relative_orbit": 139,
     "s2:water_percentage": 95.782292,
+    "eo:snow_cover": 0,
     "processing:version": "05.09",
-    "s2:snow_ice_percentage": 0,
     "s2:vegetation_percentage": 0,
     "s2:thin_cirrus_percentage": 0.774645,
     "s2:cloud_shadow_percentage": 0,
@@ -732,7 +732,7 @@
   },
   "stac_extensions": [
     "https://stac-extensions.github.io/sentinel-2/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/eo/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/eo/v1.1.0/schema.json",
     "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
     "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
     "https://stac-extensions.github.io/processing/v1.2.0/schema.json"
