@@ -54,7 +54,6 @@
       "anyOf": [
         { "required": ["s2:tile_id"] },
         { "required": ["s2:datatake_id"] },
-        { "required": ["s2:product_uri"] },
         { "required": ["s2:datastrip_id"] },
         { "required": ["s2:product_type"] },
         { "required": ["s2:datatake_type"] },
@@ -69,8 +68,7 @@
         { "required": ["s2:degraded_msi_data_percentage"] },
         { "required": ["s2:high_proba_clouds_percentage"] },
         { "required": ["s2:medium_proba_clouds_percentage"] },
-        { "required": ["s2:saturated_defective_pixel_percentage"] },
-        { "required": ["s2:reflectance_conversion_factor"] }
+        { "required": ["s2:saturated_defective_pixel_percentage"] }
       ]
     },
     "fields": {
@@ -91,7 +89,8 @@
         },
         "s2:product_uri": {
           "title": "Product URI",
-          "type": "string"
+          "type": "string",
+          "deprecated": true
         },
         "s2:datastrip_id": {
           "title": "Datastrip Identifier",
@@ -211,7 +210,8 @@
         },
         "s2:reflectance_conversion_factor": {
           "title": "Reflectance Conversion Factor",
-          "type": "number"
+          "type": "number",
+          "deprecated": true
         },
         "s2:mgrs_tile": {
           "title": "Sentinel-2 MGRS Tile Identifier",
