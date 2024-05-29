@@ -39,8 +39,6 @@ The fields in the table below can be used in these parts of STAC documents:
 | s2:datastrip_id                         | string   | Datastrip Identifier                           |
 | s2:product_type                         | string   | Product Type                                   |
 | s2:datatake_type                        | string   | Datatake Type                                  |
-| s2:generation_time                      | datetime | Generation Time                                |
-| s2:processing_baseline                  | string   | [Processing Baseline](https://sentinels.copernicus.eu/web/sentinel/technical-guides/sentinel-2-msi/processing-baseline) |
 | s2:reflectance_conversion_factor        | number   | Reflectance Conversion Factor                  |
 | s2:water_percentage                     | number   | Water Percentage                               |
 | s2:vegetation_percentage                | number   | Vegetation Percentage                          |
@@ -55,6 +53,8 @@ The fields in the table below can be used in these parts of STAC documents:
 | s2:medium_proba_clouds_percentage       | number   | Medium Probability Clouds Percentage           |
 | s2:saturated_defective_pixel_percentage | number   | Saturated Defective Pixel Percentage           |
 | s2:snow_ice_percentage                  | number   | **DEPRECATED** Snow and Ice Percentage         |
+| s2:generation_time                      | datetime | **DEPRECATED** Generation Time                                |
+| s2:processing_baseline                  | string   | **DEPRECATED** [Processing Baseline](https://sentinels.copernicus.eu/web/sentinel/technical-guides/sentinel-2-msi/processing-baseline) |
 | s2:granule_id                           | string   | **DEPRECATED** Granule Identifier              |
 | s2:mgrs_tile                            | string   | **DEPRECATED** Sentinel-2 MGRS Tile Identifier |
 | s2:mean_solar_zenith                    | number   | **DEPRECATED** Mean Solar Zenith               |
@@ -63,6 +63,10 @@ The fields in the table below can be used in these parts of STAC documents:
 ### Additional Field Information
 
 **s2:snow_ice_percentage** is deprecated in favor of `eo:snow_cover`
+
+**s2:generation_time** is deprecated in favor of `processing:datetime`
+
+**s2:processing_baseline** is deprecated in favor of `processing:version`
 
 **s2:granule_id** is deprecated in favor of `s2:tile_id`
 
