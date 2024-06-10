@@ -709,7 +709,7 @@
     "s2:datatake_id": "GS2A_20231107T144731_043751_N05.09",
     "s2:product_uri": "S2A_MSIL2A_20231107T144731_N0509_R139_T20QRF_20231107T182159.SAFE",
     "s2:datastrip_id": "S2A_OPER_MSI_L2A_DS_MSFT_20231107T182159_S20231107T144729_N05.09",
-    "s2:product_type": "S2MSI2A",
+    "product:type": "S2MSI2A",
     "sat:orbit_state": "descending",
     "s2:datatake_type": "INS-NOBS",
     "processing:datetime": "2023-11-07T18:21:59.14490Z",
@@ -735,7 +735,8 @@
     "https://stac-extensions.github.io/eo/v1.1.0/schema.json",
     "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
     "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
-    "https://stac-extensions.github.io/processing/v1.2.0/schema.json"
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v0.1.0/schema.json"
   ],
   "stac_version": "1.0.0"
 }

@@ -56,7 +56,6 @@
         { "required": ["s2:datatake_id"] },
         { "required": ["s2:product_uri"] },
         { "required": ["s2:datastrip_id"] },
-        { "required": ["s2:product_type"] },
         { "required": ["s2:datatake_type"] },
         { "required": ["s2:water_percentage"] },
         { "required": ["s2:vegetation_percentage"] },
@@ -99,7 +98,8 @@
         },
         "s2:product_type": {
           "title": "Product Type",
-          "type": "string"
+          "type": "string",
+          "deprecated": true
         },
         "s2:datatake_type": {
           "title": "Datatake Type",
