@@ -39,18 +39,18 @@ The fields in the table below can be used in these parts of STAC documents:
 | s2:datastrip_id                         | string   | Datastrip Identifier                                         |
 | s2:datatake_type                        | string   | Datatake Type                                                |
 | s2:reflectance_conversion_factor        | number   | Reflectance Conversion Factor                                |
-| s2:water_percentage                     | number   | Water Percentage                                             |
-| s2:vegetation_percentage                | number   | Vegetation Percentage                                        |
-| s2:thin_cirrus_percentage               | number   | Thin Cirrus Percentage                                       |
-| s2:cloud_shadow_percentage              | number   | Cloud Shadow Percentage                                      |
-| s2:nodata_pixel_percentage              | number   | No Data Pixel Percentage                                     |
-| s2:unclassified_percentage              | number   | Unclassified Percentage                                      |
-| s2:dark_features_percentage             | number   | Dark Features Percentage                                     |
-| s2:not_vegetated_percentage             | number   | Not Vegetated Percentage                                     |
-| s2:degraded_msi_data_percentage         | number   | Degraded MSI Data Percentage                                 |
-| s2:high_proba_clouds_percentage         | number   | High Probability Clouds Percentage                           |
-| s2:medium_proba_clouds_percentage       | number   | Medium Probability Clouds Percentage                         |
-| s2:saturated_defective_pixel_percentage | number   | Saturated Defective Pixel Percentage                         |
+| s2:water_percentage                     | number   | **DEPRECATED** in favor of `statistics`. Water Percentage    |
+| s2:vegetation_percentage                | number   | **DEPRECATED** in favor of `statistics`. Vegetation Percentage |
+| s2:thin_cirrus_percentage               | number   | **DEPRECATED** in favor of `statistics`. Thin Cirrus Percentage |
+| s2:cloud_shadow_percentage              | number   | **DEPRECATED** in favor of `statistics`. Cloud Shadow Percentage |
+| s2:nodata_pixel_percentage              | number   | **DEPRECATED** in favor of `statistics`. No Data Pixel Percentage |
+| s2:unclassified_percentage              | number   | **DEPRECATED** in favor of `statistics`. Unclassified Percentage |
+| s2:dark_features_percentage             | number   | **DEPRECATED** in favor of `statistics`. Dark Features Percentage |
+| s2:not_vegetated_percentage             | number   | **DEPRECATED** in favor of `statistics`. Not Vegetated Percentage |
+| s2:degraded_msi_data_percentage         | number   | **DEPRECATED** in favor of `statistics`. Degraded MSI Data Percentage |
+| s2:high_proba_clouds_percentage         | number   | **DEPRECATED** in favor of `statistics`. High Probability Clouds Percentage |
+| s2:medium_proba_clouds_percentage       | number   | **DEPRECATED** in favor of `statistics`. Medium Probability Clouds Percentage |
+| s2:saturated_defective_pixel_percentage | number   | **DEPRECATED** in favor of `statistics`. Saturated Defective Pixel Percentage |
 | s2:product_type                         | string   | **DEPRECATED** in favor of `product:type`. Product Type      |
 | s2:snow_ice_percentage                  | number   | **DEPRECATED** in favor of `eo:snow_cover`. Snow and Ice Percentage |
 | s2:generation_time                      | datetime | **DEPRECATED** in favor of `processing:datetime`. Generation Time |
@@ -59,6 +59,11 @@ The fields in the table below can be used in these parts of STAC documents:
 | s2:mgrs_tile                            | string   | **DEPRECATED** in favor of the [MGRS Extension](https://github.com/stac-extensions/mgrs) fields and `grid:code`. Sentinel-2 MGRS Tile Identifier |
 | s2:mean_solar_zenith                    | number   | **DEPRECATED** in favor of `view:sun_elevation`. Mean Solar Zenith |
 | s2:mean_solar_azimuth                   | number   | **DEPRECATED** in favor of `view:sun_azimuth`. Mean Solar Azimuth |
+
+The fields with the `_percentage` suffix should be provided in the `statistics` field as defined in
+[common metadata](https://github.com/radiantearth/stac-spec/blob/dev/commons/common-metadata.md#statistics-object).
+Ideally remove the `s2:` prefix and the `_percentage` suffix and use the remainders as the key name in the Statistics Object,
+so for example `high_proba_clouds` instead of `s2:high_proba_clouds_percentage`.
 
 ## Relation types
 

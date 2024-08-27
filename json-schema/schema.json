@@ -57,18 +57,6 @@
         { "required": ["s2:product_uri"] },
         { "required": ["s2:datastrip_id"] },
         { "required": ["s2:datatake_type"] },
-        { "required": ["s2:water_percentage"] },
-        { "required": ["s2:vegetation_percentage"] },
-        { "required": ["s2:thin_cirrus_percentage"] },
-        { "required": ["s2:cloud_shadow_percentage"] },
-        { "required": ["s2:nodata_pixel_percentage"] },
-        { "required": ["s2:unclassified_percentage"] },
-        { "required": ["s2:dark_features_percentage"] },
-        { "required": ["s2:not_vegetated_percentage"] },
-        { "required": ["s2:degraded_msi_data_percentage"] },
-        { "required": ["s2:high_proba_clouds_percentage"] },
-        { "required": ["s2:medium_proba_clouds_percentage"] },
-        { "required": ["s2:saturated_defective_pixel_percentage"] },
         { "required": ["s2:reflectance_conversion_factor"] }
       ]
     },

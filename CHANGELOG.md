@@ -17,6 +17,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `s2:snow_ice_percentage` in favor of `eo:snow_cover`
 - `s2:generation_time` in favor of `processing:datetime`
 - `s2:processing_baseline` in favor of `processing:version`
+- `s2:water_percentage` in favor of an entry in `statistics`
+- `s2:vegetation_percentage` in favor of an entry in `statistics`
+- `s2:thin_cirrus_percentage` in favor of an entry in `statistics`
+- `s2:cloud_shadow_percentage` in favor of an entry in `statistics`
+- `s2:nodata_pixel_percentage` in favor of an entry in `statistics`
+- `s2:unclassified_percentage` in favor of an entry in `statistics`
+- `s2:dark_features_percentage` in favor of an entry in `statistics`
+- `s2:not_vegetated_percentage` in favor of an entry in `statistics`
+- `s2:degraded_msi_data_percentage` in favor of an entry in `statistics`
+- `s2:high_proba_clouds_percentage` in favor of an entry in `statistics`
+- `s2:medium_proba_clouds_percentage` in favor of an entry in `statistics`
+- `s2:saturated_defective_pixel_percentage` in favor of an entry in `statistics`
 
 ### Removed
 
