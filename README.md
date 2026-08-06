@@ -54,7 +54,7 @@ The fields in the table below can be used in these parts of STAC documents:
 | s2:product_type                         | string   | **DEPRECATED** in favor of `product:type`. Product Type      |
 | s2:snow_ice_percentage                  | number   | **DEPRECATED** in favor of `eo:snow_cover`. Snow and Ice Percentage |
 | s2:generation_time                      | datetime | **DEPRECATED** in favor of `processing:datetime`. Generation Time |
-| s2:processing_baseline                  | string   | **DEPRECATED** in favor of `processing:version`. [Processing Baseline](https://sentinels.copernicus.eu/web/sentinel/technical-guides/sentinel-2-msi/processing-baseline) |
+| s2:processing_baseline                  | string   | **DEPRECATED** in favor of `processing:version`. [Processing Baseline](https://sentiwiki.copernicus.eu/web/s2-processing#Processing-Baseline) |
 | s2:granule_id                           | string   | **DEPRECATED** in favor of `s2:tile_id`. Granule Identifier  |
 | s2:mgrs_tile                            | string   | **DEPRECATED** in favor of the [MGRS Extension](https://github.com/stac-extensions/mgrs) fields and `grid:code`. Sentinel-2 MGRS Tile Identifier |
 | s2:mean_solar_zenith                    | number   | **DEPRECATED** in favor of `view:sun_elevation`. Mean Solar Zenith |
